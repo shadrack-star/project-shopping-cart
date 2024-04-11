@@ -16,9 +16,17 @@ By Shadrack Ngeno
 - Then run "json-server --watch database.json" to run our server.
 - The run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
 - And your application is running.
+  ## Screenshots
+  ![Screenshot from 2024-04-11 17-10-36](https://github.com/shadrack-star/project-shopping-cart/assets/58778974/03f65bc1-c136-43e6-b68d-8afcfebfb070)
+
 ## Live link
+<<<<<<< HEAD
 Deployed Frontend can be accessed here
 Deployed Backend can be accessed here
+=======
+Deployed Frontend can be accessed here 
+Deployed Backend can be accessed here 
+>>>>>>> 43307f66cb8e6a1832d0b8cb19bc41ff0972c03e
 
 ## Technologies used
 - JavaScript
