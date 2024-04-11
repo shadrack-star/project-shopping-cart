@@ -1,0 +1,96 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Egg",
+        "price": 30,
+        "image": "images/egg.jpg",  "category": "breakfast"
+      },
+      {
+        "id": 2,
+        "name": "Muffin",
+        "price": 100,
+        "image": "images/muffin.jpg",  "category": "breakfast"
+      },
+      {
+        "id": 3,
+        "name": "Pancake",
+        "price": 40,
+        "image": "images/pancake.jpg",  "category": "breakfast"
+      },
+      {
+        "id": 4,
+        "name": "Biscuit",
+        "price": 20,
+        "image": "images/biscuit.jpg",  "category": "breakfast"
+      },
+      {
+        "id": 5,
+        "name": "Orange Juice",
+        "price": 150,
+        "image": "images/orange_juice.jpg",  "category": "drink"
+      },
+      {
+        "id": 6,
+        "name": "Peanut Butter and Jelly Sandwich",
+        "price": 200,
+        "image": "images/pbj.jpg",  "category": "lunch"
+      },
+      {
+        "id": 7,
+        "name": "Bologna Sandwich",
+        "price": 200,
+        "image": "images/bologna.jpg",  "category": "lunch"
+      },
+      {
+        "id": 8,
+        "name": "Taco",
+        "price": 200,
+        "image": "images/taco.jpg",  "category": "lunch"
+      },
+      {
+        "id": 9,
+        "name": "Soup",
+        "price": 50,
+        "image": "images/soup.jpg",  "category": "lunch"
+      },
+      {
+        "id": 10,
+        "name": "Water",
+        "price": 40,
+        "image": "images/water.jpg",  "category": "drink"
+      },
+      {
+        "id": 11,
+        "name": "Burger",
+        "price": 120,
+        "image": "images/burger.jpg",  "category": "dinner"
+      },
+      {
+        "id": 12,
+        "name": "Pizza",
+        "price": 250,
+        "image": "images/pizza.jpg",  "category": "dinner"
+      },
+      {
+        "id": 13,
+        "name": "Chicken",
+        "price": 350,
+        "image": "images/chicken.jpg",  "category": "dinner"
+      },
+      {
+        "id": 14,
+        "name": "Salad",
+        "price": 60,
+        "image": "images/salad.jpg",  "category": "dinner"
+      },
+      {
+        "id": 15,
+        "name": "Soda",
+        "price": 70,
+        "image": "images/soda.jpg",  "category": "drink"
+      }
+    ]
+}
+        
+  
