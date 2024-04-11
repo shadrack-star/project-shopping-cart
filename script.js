@@ -1,54 +1,54 @@
 //define the prices for each item
 let price = {
   egg: 30,
-  muffin: 100,
+  muffin: 350, // blueband
   pancake: 40,
-  biscuit: 20,
-  oj: 150,
-  pbj: 200,
-  bologna: 200,
-  taco: 200,
-  soup: 50,
-  water: 40,
+  biscuit: 65,    //bread
+  oj: 80,         //milk
+  pbj: 50,         //cabbage
+  bologna: 180, //peas
+  taco: 800,    //rice
+  soup: 30,    //avocado
+  water: 70,
   burger: 120,
-  pizza: 250,
-  chicken: 350,
-  salad: 60,
-  soda: 70,
-  icecream: 100,
-  flan: 120,
-  cookie: 60,
-  cupcake: 150,
-  milkshake: 300
+  pizza: 50,  //sukumawiki
+  chicken: 300, // meat
+  salad: 120,
+  soda: 110,
+  icecream: 350,
+  flan: 100,  //biscuit
+  cookie: 120, //oreo
+  cupcake: 150, //tropical sweet
+  milkshake: 150 //yorghut
 };
 
 // define categories for each item
-let drink = ["oj", "water", "soda", "milkshake"];
-let breakfast = ["egg", "muffin", "pancake", "biscuit"];
-let lunch = ["pbj", "bologna", "taco", "soup"];
-let dinner = ["burger", "pizza", "chicken", "salad"];
-let sweet = ["icecream", "flan", "cookie", "cupcake"];
+var drink = ["oj", "water", "soda", "milkshake"];
+var breakfast = ["egg", "muffin", "pancake", "biscuit"];
+var lunch = ["pbj", "bologna", "taco", "soup"];
+var dinner = ["burger", "pizza", "chicken", "salad"];
+var sweet = ["icecream", "flan", "cookie", "cupcake"];
 
 
 // add each category to an object (used for match individual items to their categories)
- let cats = { drink, breakfast, lunch, dinner, sweet };
+ var cats = { drink, breakfast, lunch, dinner, sweet };
 
 /* indicies for items added to category divs
  * e.g. if muffin is added after pancake, muffin will have an index of 1
  */
 
-let drinkIdx = 0;
-let breakfastIdx = 0;
-let lunchIdx = 0;
-let dinnerIdx = 0;
-let sweetIdx = 0;
+var drinkIdx = 0;
+var breakfastIdx = 0;
+var lunchIdx = 0;
+var dinnerIdx = 0;
+var sweetIdx = 0;
 
 
 /* sets image attribtes that apply to all images
  * this also saves some clutter in the HTML
  */
 function setAttributes() {
-  let unassigned = document.getElementsByTagName("img");
+  var unassigned = document.getElementsByTagName("img");
   for (i = 0; i < unassigned.length; i++) {
     unassigned[i].onclick = function () { addItem(this); };
     unassigned[i].style.width = "150px";
@@ -57,7 +57,7 @@ function setAttributes() {
 
 // returns the price of an item based on the image id
 function getPrice(obj) {
-  let id = obj.id;
+  var id = obj.id;
   for (i in price) {
     if (i == id) {
       return price[i];
@@ -67,7 +67,7 @@ function getPrice(obj) {
 
 // returns the category of an item based on the image id
 function getCategory(obj) {
-  let id = obj.id;
+  var id = obj.id;
   for (i in cats) {
     for (j = 0; j < cats[i].length; j++) {
       if (id == cats[i][j]) {
@@ -79,22 +79,22 @@ function getCategory(obj) {
 
 // calculates the total price for all items in each category div
 function calculatePrice() {
-  let total = 0;
+  var total = 0;
   for (i in cats) {
-    let div = document.getElementById(i);
-    let nodes = div.childNodes;
+    var div = document.getElementById(i);
+    var nodes = div.childNodes;
     for (j = 0; j < nodes.length; j++) {
       total += parseFloat(nodes[j].getAttribute("price"));
     }
   }
-  let parseTotal = total.toFixed(2);
-  let totalDiv = document.getElementById("total");
+  var parseTotal = total.toFixed(2);
+  var totalDiv = document.getElementById("total");
   totalDiv.innerHTML = "Total: ksh" + parseTotal;
 }
 
 // clears the output of calculatePrice() and replaced it with a non-breaking space
 function clearTotal() {
-  let div = document.getElementById("total");
+  var div = document.getElementById("total");
   if (div.innerHTML != "") {
     div.innerHTML = "&nbsp";
   }
@@ -103,9 +103,9 @@ function clearTotal() {
 // clears each category div, and resets each category index to 0
 function clearList() {
   for (i in cats) {
-    let div = document.getElementById(i)
+    var div = document.getElementById(i)
     while (div.hasChildNodes()) {
-      let nodes = div.childNodes;
+      var nodes = div.childNodes;
       div.removeChild(nodes[0]);
     }
   }
@@ -119,8 +119,8 @@ function clearList() {
 
 // clears a categories column, resets that index to 0, and clears the total price (if present)
 function clearColumn(obj) {
-  let cat = obj.nextElementSibling.id;
-  let div = document.getElementById(cat);
+  var cat = obj.nextElementSibling.id;
+  var div = document.getElementById(cat);
   while (div.hasChildNodes()) {
     div.removeChild(div.childNodes[0]);
   }
@@ -165,21 +165,22 @@ function clearColumn(obj) {
  * 2) deleteItem(...) which removes the actual image from the column
  */
 function clearCell(obj, category, price) {
-  let idx = obj.tabIndex;
-  let div = document.getElementById(category);
-  let nodes = div.childNodes;
-  let itemP = nodes[idx].getAttribute("price");
-  let n = itemP / price;
+  var idx = obj.tabIndex;
+  var div = document.getElementById(category);
+  var nodes = div.childNodes;
+  var itemP = nodes[idx].getAttribute("price");
+  var n = itemP / price;
   for (i = 0; i < n - 1; i++) {
     deleteItem(obj, category, price);
   }
 }
 
+
 // adds an item's image into a category div based on the image's id
 function addItem(obj) {
-  let idx; //used to idicate what position an item is in a column
-  let category = getCategory(obj);
-  let div = document.getElementById(category);
+  var idx; //used to idicate what position an item is in a column
+  var category = getCategory(obj);
+  var div = document.getElementById(category);
 
   switch (category) {
     case "drink":
@@ -200,10 +201,10 @@ function addItem(obj) {
   }
 
   // determines whether next image input is a copy of a previous image
-  let stack = false;
+  var stack = false;
   if (idx > 0) {
-    let srcImg = 'url("' + obj.src + '")';
-    let nodes = document.getElementById(category).childNodes;
+    var srcImg = 'url("' + obj.src + '")';
+    var nodes = document.getElementById(category).childNodes;
     for (i = 0; i < nodes.length; i++) {
       if (nodes[i].style.backgroundImage == srcImg) {
         stack = true;
@@ -221,7 +222,7 @@ function addItem(obj) {
    * then the overlay information is updated
    */
   if (!stack) {
-    let newDiv = document.createElement("div");
+    var newDiv = document.createElement("div");
     newDiv.setAttribute("class", "fix");
     newDiv.style.backgroundImage = "url(" + obj.src + ")";
     newDiv.style.backgroundSize = "150px 150px";
@@ -230,16 +231,16 @@ function addItem(obj) {
     newDiv.tabIndex = idx;
     newDiv.onclick = function () { deleteItem(this, category, getPrice(obj)); };
 
-    let text = document.createElement("div");
+    var text = document.createElement("div");
     text.innerHTML = "x1";
     text.setAttribute("class", "fixed")
 
-    let dollar = document.createElement("div");
+    var dollar = document.createElement("div");
     dollar.innerHTML = "ksh" + getPrice(obj).toFixed(2);
     dollar.setAttribute("class", "fixed")
 
-    let inputDiv = document.createElement("div");
-    let input = document.createElement("input");
+    var inputDiv = document.createElement("div");
+    var input = document.createElement("input");
     input.value = "clear"
     input.type = "button"
     input.onclick = function () { clearCell(newDiv, category, getPrice(obj)); };
@@ -268,19 +269,19 @@ function addItem(obj) {
         break;
     }
   } else {
-    let index;
+    var index;
     for (i = 0; i < div.childNodes.length; i++) {
       if (div.childNodes[i].style.backgroundImage == srcImg) {
         index = i;
       }
     }
-    let node = div.childNodes[index];
-    let itemP = parseFloat(node.getAttribute("price"));
-    let count = node.firstElementChild;
-    let num = parseInt(count.innerHTML.substr(1, count.innerHTML.length)) + 1;
+    var node = div.childNodes[index];
+    var itemP = parseFloat(node.getAttribute("price"));
+    var count = node.firstElementChild;
+    var num = parseInt(count.innerHTML.substr(1, count.innerHTML.length)) + 1;
 
-    let dollar = count.nextElementSibling;
-    let amount = parseFloat(dollar.innerHTML.substr(1, dollar.innerHTML.length));
+    var dollar = count.nextElementSibling;
+    var amount = parseFloat(dollar.innerHTML.substr(1, dollar.innerHTML.length));
     amount += getPrice(obj);
 
     count.innerHTML = "x" + num;
@@ -289,6 +290,7 @@ function addItem(obj) {
   }
   clearTotal();
 };
+
 
 
 /* detets an item from the column
@@ -300,18 +302,18 @@ function addItem(obj) {
  * and updates the tabIndex for each image
  */
 function deleteItem(obj, category, price) {
-  let idx = obj.tabIndex;
-  let div = document.getElementById(category);
-  let nodes = div.childNodes;
-  let itemP = parseFloat(nodes[idx].getAttribute("price")).toFixed(2);
+  var idx = obj.tabIndex;
+  var div = document.getElementById(category);
+  var nodes = div.childNodes;
+  var itemP = parseFloat(nodes[idx].getAttribute("price")).toFixed(2);
 
   if (itemP > price) {
     nodes[idx].setAttribute("price", itemP - price);
-    let count = nodes[idx].firstElementChild;
-    let dollar = count.nextElementSibling;
+    var count = nodes[idx].firstElementChild;
+    var dollar = count.nextElementSibling;
 
-    let num = parseInt(count.innerHTML.substr(1, count.innerHTML.length)) - 1;
-    let amount = parseFloat(dollar.innerHTML.substr(1, dollar.innerHTML.length));
+    var num = parseInt(count.innerHTML.substr(1, count.innerHTML.length)) - 1;
+    var amount = parseFloat(dollar.innerHTML.substr(1, dollar.innerHTML.length));
     amount -= price;
 
     count.innerHTML = "x" + num;

@@ -1,134 +1,97 @@
 /* General styles */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #f2f2f2; /* Light gray background */
-  }
-  
-  header {
-	background-color: #343a40; /* Dark blue background */
-	color: white; /* White text */
-	padding: 20px;
-	text-align: center;
-  }
-  
-  h1 {
-	margin: 0;
-	font-size: 2em;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
-  }
-  
-  main {
-	padding: 20px;
-  }
-  
-  table {
-	width: 100%;
-	border-collapse: collapse;
-	border: 2px solid #ddd; /* Thicker table border */
-  }
-  
-  th, td {
-	padding: 10px;
-	text-align: center;
-  }
-  
-  img {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	border: 2px solid #fff; /* White border around images */
-	transition: transform 0.2s ease-in-out; /* Smooth hover effect */
-  }
-  
-  img:hover {
-	transform: scale(1.1); /* Enlarge image slightly on hover */
-  }
-  
-  #contain {
-	margin-top: 20px;
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	background-color: #ececec; /* Light gray background for cart section */
-  }
-  
-  #contain p {
-	margin-bottom: 10px;
-	font-weight: bold;
-  }
-  
-  input[type="button"] {
-	padding: 5px 10px;
-	margin-right: 10px;
-	border: none;
-	border-radius: 3px;
-	background-color: #4CAF50; /* Green color for buttons */
-	color: white;
-	cursor: pointer;
-	transition: background-color 0.2s ease-in-out; /* Smooth button hover effect */
-  }
-  
-  input[type="button"]:hover {
-	background-color: #3e8e41; /* Darker green on hover */
-  }
-  
-  #total {
-	margin-top: 10px;
-	font-weight: bold;
-  }
-  
-  #checkout-btn {
-	padding: 10px 20px;
-	margin-top: 10px;
-	background-color: #e74c3c; /* Red color for checkout button */
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.2s ease-in-out;
-  }
-  
-  #checkout-btn:hover {
-	background-color: #c0392b; /* Darker red on hover */
-  }
-  
-  .center {
-	margin: 0 auto;
-  }
-  
-  /* Footer styles */
-  footer {
-	display: flex;
-	background-color: #636060;
-	border-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	margin: 4rem auto;
-	padding: 1rem;
-  }
- 
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-	table {
-	  width: auto;
-	}
-	table th, table td {
-	  display: block;
-	  width: 100%;
-	}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #444; /* Dark gray text color */
+}
+
+.header {
 	
-	#checkout-btn {
-	  width: 100%;
-	}
-	
-	
-	
-	
-	.footer ul {
-	  margin-top: 0;
-	  
-	}
-  }
-  
+    width: 100%;
+    background-color:  rgb(5, 5, 151); /* Dark  background */
+    color: white; /* White text */
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Enhance text shadow for depth */
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none; /* Remove table border */
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px; /* Smaller padding for cells */
+    text-align: center;
+    font-size: 0.9em; /* Smaller font size for better fit */
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Make images circular */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+img:hover {
+    transform: scale(1.05); /* Enlarge image slightly on hover */
+}
+
+#contain {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for container */
+    background-color: #fff; /* White background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+#contain p {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+input[type="button"], #checkout-btn {
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green color for buttons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; /* Smooth button hover effect */
+}
+
+input[type="button"]:hover, #checkout-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+   
+    bottom: 0;
+}

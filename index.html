@@ -1,61 +1,105 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width">
+    <title>Grocery Cart</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="next-head-count" content="3">
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Grocery Shopping Cart </title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-   
 </head>
 
 <body>
-    <header>
-        <h1>Grocery Shopping Cart </h1>
+    <header class="header">
+        <h1>Grocery Cart Page</h1>
         
     </header>
+    <h3>Click the items to add them to your cart</h3>
 
-    <main>
-        <p>Click the items to add them to your cart</p>
     <table id="choices mx-3">
         <tbody>
             <tr>
-                <td><img src="images/egg.jpg" alt="Egg" id="egg" /></td>
-                <td><img src="images/muffin.png" alt="muffin" id="muffin" /></td>
-                <td><img src="images/pancake.jpg" alt="pancakes" id="pancake" /></td>
-                <td><img src="images/biscuit.jpg" alt="biscuit" id="biscuit" /></td>
-                <td><img src="images/oj.png" alt="Orange juice" id="oj" /></td>
+                <td><img src="images/egg.jpg" alt="Egg" id="egg" />
+                    <h3>Egg</h3>
+                    <p>Ksh 30</p>
+                </td>
+                <td><img src="images/muffin.png" alt="muffin" id="muffin" />
+                    <h3>Blueband 500g</h3>
+                    <p>Ksh 350</p>
+
+                </td>
+                <td><img src="images/pancake.jpg" alt="pancakes" id="pancake" />
+                    <h3>pancake</h3>
+                    <p>Ksh 40</p></td>
+                <td><img src="images/biscuit.jpg" alt="biscuit" id="biscuit" />
+                    <h3>Bread</h3>
+                    <p>Ksh 65</p></td>
+                <td><img src="images/oj.png" alt="Orange juice" id="oj" />
+                    <h3>Milk</h3>
+                    <p>Ksh 80</p></td>
             </tr>
             <tr>
-                <td><img src="images/pbj.jpg" alt="Peanut butter and jelly" id="pbj" /></td>
-                <td><img src="images/bologna.jpg" alt="bologna" id="bologna" /></td>
-                <td><img src="images/taco.jpg" alt="taco" id="taco" /></td>
-                <td><img src="images/soup.png" alt="soup" id="soup" /></td>
-                <td><img src="images/water.jpg" alt="water" id="water" /></td>
+                <td><img src="images/pbj.jpg" alt="Peanut butter and jelly" id="pbj" />
+                    <h3>Cabbage</h3>
+                    <p>Ksh 50</p></td>
+                <td><img src="images/bologna.jpg" alt="bologna" id="bologna" />
+                    <h3>peas 1kg</h3>
+                    <p>Ksh 180</p></td>
+                <td><img src="images/taco.jpg" alt="taco" id="taco" />
+                    <h3>Rice 5kg</h3>
+                    <p>Ksh 800</p></td>
+                <td><img src="images/soup.png" alt="soup" id="soup" />
+                    <h3>Avocado</h3>
+                    <p>Ksh 30</p></td>
+                <td><img src="images/water.jpg" alt="water" id="water" />
+                    <h3>water 1ltr</h3>
+                    <p>Ksh 70</p></td>
             </tr>
             <tr>
-                <td><img src="images/burger.gif" alt="burger" id="burger" /></td>
-                <td><img src="images/pizza.jpg" alt="pizza" id="pizza" /></td>
-                <td><img src="images/chicken.jpg" alt="chicken" id="chicken" /></td>
-                <td><img src="images/salad.png" alt="salad" id="salad" /></td>
-                <td><img src="images/soda.jpg" alt="soda" id="soda" /></td>
+                <td><img src="images/burger.gif" alt="burger" id="burger" />
+                    <h3>burger</h3>
+                    <p>Ksh 120</p></td>
+                <td><img src="images/pizza.jpg" alt="pizza" id="pizza" />
+                    <h3>Sukumawiki</h3>
+                    <p>Ksh 50</p></td>
+                <td><img src="images/chicken.jpg" alt="chicken" id="chicken" />
+                    <h3>meat 1kg</h3>
+                    <p>Ksh 300</p></td>
+                <td><img src="images/salad.png" alt="salad" id="salad" />
+                    <h3>salad</h3>
+                    <p>Ksh 120</p></td>
+                <td><img src="images/soda.jpg" alt="soda" id="soda" />
+                    <h3>Soda 1ltr</h3>
+                    <p>Ksh 110</p></td>
             </tr>
             <tr>
-                <td><img src="images/icecream.jpg" alt="Ice cream" id="icecream" /></td>
-                <td><img src="images/flan.jpg" alt="flan" id="flan" /></td>
-                <td><img src="images/cookie.jpg" alt="cookie" id="cookie" /></td>
-                <td><img src="images/cupcake.jpg" alt="cupcake" id="cupcake" /></td>
-                <td><img src="images/milkshake.jpg" alt="milkshake" id="milkshake" /></td>
+                <td><img src="images/icecream.jpg" alt="Ice cream" id="icecream" />
+                    <h3>icecream 1kg</h3>
+                    <p>Ksh 350</p></td>
+                <td><img src="images/flan.jpg" alt="flan" id="flan" />
+                    <h3>biscuit 500g</h3>
+                    <p>Ksh 100</p></td>
+                <td><img src="images/cookie.jpg" alt="cookie" id="cookie" />
+                    <h3>Oreo</h3>
+                    <p>Ksh 120</p></td>
+                <td><img src="images/cupcake.jpg" alt="cupcake" id="cupcake" />
+                    <h3>Tropical Sweets</h3>
+                    <p>Ksh 150</p></td>
+                <td><img src="images/milkshake.jpg" alt="milkshake" id="milkshake" />
+                    <h3>Yoghurt 1ltr</h3>
+                    <p>Ksh 150</p></td>
             </tr>
         </tbody>
     </table>
-    <div id="contain mx-3">
-        <p>Grocery Cart (click item to remove)</p>
+
+ 
+     <div id="contain mx-3">
+        <h3>Grocery Cart (click item to remove)</h3>
         <input type="button" value="Clear list" onclick="clearList()" />
         <input type="button" value="Calculate price" onclick="calculatePrice()" />
+        <button id="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
     </div>
-    <div id="total mx-3"></div>
-    <button id="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    <div id="total"></div>
     <table>
         <tbody>
             <tr>
@@ -77,33 +121,12 @@
             </tr>
         </tbody>
     </table>
-  </main>
+   
     
-
-
-  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline">Contact</a>
-        </li>
-    </ul>
-    </div>
-</footer>
-
-    
-<script src="./script.js" type="text/javascript"></script>
+    <footer>
+        <p>&copy; 2024  Grocery Store. All rights reserved.</p>
+    </footer>
+<script src="script.js" type="text/javascript"></script>
 
 </body>
 </html>

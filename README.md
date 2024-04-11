@@ -17,14 +17,15 @@ By Shadrack Ngeno
 - The run your index.html by either using the "GO LIVE" extension or by double clicking of the index.html
 - And your application is running.
 ## Live link
-Deployed Frontend can be accessed here Blog
-Deployed Backend can be accessed here Blog
+Deployed Frontend can be accessed here
+Deployed Backend can be accessed here
 
 ## Technologies used
 - JavaScript
 - HTML
 - CSS
 - Github
+
 
 ## Known Bugs
 The products cannot display more than once the cart.
