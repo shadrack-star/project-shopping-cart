@@ -5,7 +5,7 @@ let price = {
   pancake: 40,
   biscuit: 65,    //bread
   oj: 80,         //milk
-  pbj: 50,         //cabbage
+  pbj: 50,         //Cabbage
   bologna: 180, //peas
   taco: 800,    //rice
   soup: 30,    //avocado
