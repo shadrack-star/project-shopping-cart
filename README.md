@@ -18,15 +18,6 @@ By Shadrack Ngeno
 - And your application is running.
   
 
-## Live link
-<<<<<<< HEAD
-Deployed Frontend can be accessed here
-Deployed Backend can be accessed here
-=======
-Deployed Frontend can be accessed here 
-Deployed Backend can be accessed here 
->>>>>>> 43307f66cb8e6a1832d0b8cb19bc41ff0972c03e
-
 ## Technologies used
 - JavaScript
 - HTML
