@@ -21,6 +21,120 @@ let price = {
   cupcake: 150, //tropical sweet
   milkshake: 150 //yorghut
 };
+// Fetch data from db.json file
+function fetchData() {
+  fetch('db.json')
+      .then(response => response.json())
+      .then(data => {
+          // Process the retrieved data
+          console.log(data);
+          // Populate the shopping cart interface with the retrieved data
+          populateCart(data.items);
+      })
+      .catch(error => {
+          console.error('Error fetching data:', error);
+      });
+}
+function postData(data) {
+  fetch('https://project-shopping-cart-1.onrender.com/items', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(newItem => {
+      console.log('New item added:', newItem);
+      // Handle the response as needed
+  })
+  .catch(error => {
+      console.error('Error posting data:', error);
+  });
+}
+
+// Example usage:
+const newItem = {
+  name: 'New Item',
+  price: 100,
+  image: 'images/new-item.jpg',
+  category: 'other'
+};
+
+postData(newItem);
+
+
+// Function to populate the shopping cart interface with item data
+function populateCart(items) {
+  // Loop through each item and add it to the appropriate category in the UI
+  items.forEach(item => {
+      addItemToUI(item);
+  });
+}
+
+// Function to add an item to the UI
+function addItemToUI(item) {
+  // Create HTML elements for the item
+  const itemDiv = document.createElement('div');
+  itemDiv.classList.add('item');
+  itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <h3>${item.name}</h3>
+      <p>Ksh ${item.price}</p>
+  `;
+
+  // Add click event listener to the item
+  itemDiv.addEventListener('click', () => {
+      // Call a function to add the item to the shopping cart
+      addToCart(item);
+  });
+
+  // Append the item to the appropriate category in the UI based on its category
+  const categoryDiv = document.getElementById(item.category);
+  categoryDiv.appendChild(itemDiv);
+}
+
+// Call the fetchData function when the page loads
+fetchData();
+
+
+// Example of using POST method to send data to server
+function addToCart(item) {
+  // Prepare data to send to the server
+  const data = {
+      itemId: item.id,
+      itemName: item.name,
+      itemPrice: item.price
+      // Add more item details if needed
+  };
+
+  // Perform an AJAX request to send data to the server
+  fetch('/api/cart', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Handle response from server
+      console.log('Item added to cart:', data);
+  })
+  .catch(error => {
+      console.error('Error adding item to cart:', error);
+  });
+}
+
+// Example usage: Call addToCart function when an item is clicked
+const item = {
+  id: 'egg',
+  name: 'Egg',
+  price: 30
+};
+addToCart(item);
+
+
 
 // define categories for each item
 var drink = ["oj", "water", "soda", "milkshake"];
